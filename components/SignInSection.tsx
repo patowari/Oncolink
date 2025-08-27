@@ -8,19 +8,20 @@ const SignInSection: React.FC = () => {
                 <div className="relative w-full max-w-3xl aspect-[4/3] md:aspect-video mx-auto rounded-lg overflow-hidden shadow-2xl">
                     {/* Patients Image (Bottom layer) */}
                     <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://uploads.onecompiler.io/42uvjq4qp/43uxmdjfx/Doctor2.jpg')" }}>
-                        <div className="absolute inset-0 bg-gray-600 opacity-40"></div>
                     </div>
                     {/* Doctors Image (Top layer, clipped) */}
                     <div className="absolute inset-0 bg-cover bg-center" style={{ 
                         backgroundImage: "url('https://uploads.onecompiler.io/42uvjq4qp/43uxmdjfx/doctor1.jpg')",
-                        clipPath: 'polygon(0 0, 60% 0, 40% 100%, 0% 100%)' 
+                        // This clip-path creates the diagonal split from near top-right to near bottom-left
+                        clipPath: 'polygon(0 0, 90% 0, 10% 100%, 0% 100%)' 
                         }}>
-                        <div className="absolute inset-0 bg-green-800 opacity-40"></div>
+                        {/* Overlay to match the darker tone of the doctors' side in the image */}
+                        <div className="absolute inset-0 bg-black opacity-30"></div>
                     </div>
 
                     {/* Doctor Card */}
-                    <a href="#" className="absolute top-[25%] left-1/2 md:top-1/2 md:left-1/4 -translate-x-1/2 -translate-y-1/2 group">
-                        <div className="w-48 h-48 md:w-56 md:h-56 border-2 border-white rounded-lg bg-black bg-opacity-20 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group-hover:bg-opacity-40 group-hover:scale-105">
+                    <a href="#" className="absolute top-[25%] left-1/2 md:top-[40%] md:left-[30%] -translate-x-1/2 -translate-y-1/2 group">
+                        <div className="w-48 h-32 md:w-56 md:h-36 border border-white rounded-lg bg-white bg-opacity-10 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group-hover:bg-opacity-20 group-hover:scale-105">
                             <div className="text-center text-white">
                                 <p className="font-light text-lg md:text-xl">FOR</p>
                                 <p className="font-bold text-2xl md:text-3xl tracking-wider">DOCTORS</p>
@@ -29,8 +30,8 @@ const SignInSection: React.FC = () => {
                     </a>
                     
                     {/* Patient Card */}
-                    <a href="#" className="absolute top-[75%] left-1/2 md:top-1/2 md:left-3/4 -translate-x-1/2 -translate-y-1/2 group">
-                         <div className="w-48 h-48 md:w-56 md:h-56 border-2 border-white rounded-lg bg-black bg-opacity-20 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group-hover:bg-opacity-40 group-hover:scale-105">
+                    <a href="#" className="absolute top-[75%] left-1/2 md:top-[60%] md:left-[70%] -translate-x-1/2 -translate-y-1/2 group">
+                         <div className="w-48 h-32 md:w-56 md:h-36 border border-white rounded-lg bg-white bg-opacity-10 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group-hover:bg-opacity-20 group-hover:scale-105">
                             <div className="text-center text-white">
                                 <p className="font-light text-lg md:text-xl">FOR</p>
                                 <p className="font-bold text-2xl md:text-3xl tracking-wider">PATIENTS</p>

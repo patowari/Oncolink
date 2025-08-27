@@ -11,7 +11,7 @@ const HeroButton: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative bg-cover bg-center text-white" style={{ backgroundImage: "url('https://picsum.photos/seed/cancer-research/1920/600')" }}>
+    <div className="relative bg-cover bg-center text-white" style={{ backgroundImage: "url('https://uploads.onecompiler.io/42uvjq4qp/43uxmdjfx/Doctor2.jpg')" }}>
       <div className="absolute inset-0 bg-blue-800 opacity-70"></div>
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center">
         <p className="text-sm md:text-base font-semibold tracking-wider">WELCOME TO BOATS - WHERE</p>
