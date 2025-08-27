@@ -13,7 +13,7 @@ const SignInSection: React.FC = () => {
                     <div className="absolute inset-0 bg-cover bg-center" style={{ 
                         backgroundImage: "url('https://uploads.onecompiler.io/42uvjq4qp/43uxmdjfx/doctor1.jpg')",
                         // This clip-path creates the diagonal split from near top-right to near bottom-left
-                        clipPath: 'polygon(0 0, 90% 0, 10% 100%, 0% 100%)' 
+                        clipPath: 'polygon(0 0, 100% 0, 1% 100%, 0% 100%)' 
                         }}>
                         {/* Overlay to match the darker tone of the doctors' side in the image */}
                         <div className="absolute inset-0 bg-black opacity-30"></div>
