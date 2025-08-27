@@ -17,7 +17,8 @@ const SignInSection: React.FC<SignInSectionProps> = ({ onCardClick }) => {
                     {/* Doctors Image (Top layer, clipped) */}
                     <div className="absolute inset-0 bg-cover bg-center" style={{ 
                         backgroundImage: "url('https://uploads.onecompiler.io/42uvjq4qp/43uxmdjfx/doctor1.jpg')",
-                        clipPath: 'polygon(0 0, 100% 0, 1% 100%, 0% 100%)' 
+                        // This clip-path creates the diagonal split from near top-right to near bottom-left
+                        clipPath: 'polygon(0 0, 90% 0, 10% 100%, 0% 100%)' 
                         }}>
                         <div className="absolute inset-0 bg-black opacity-30"></div>
                     </div>
